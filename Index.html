@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enkelilink - Guardian Angel Network</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --color-primary: #2c3e50;
@@ -12,232 +11,94 @@
             --color-accent: #e74c3c;
             --color-light: #ecf0f1;
             --color-dark: #34495e;
-            --color-success: #2ecc71;
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
             color: var(--color-light);
             line-height: 1.6;
-            min-height: 100vh;
-            background-attachment: fixed;
         }
-        
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
-        
         header {
             text-align: center;
             padding: 3rem 1rem;
-            position: relative;
         }
-        
         .logo {
-            font-size: 5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
-            animation: float 6s ease-in-out infinite;
         }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
         .tagline {
             font-size: 1.5rem;
             opacity: 0.9;
             margin-bottom: 2rem;
         }
-        
         section {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            margin: 2.5rem 0;
+            padding: 2rem;
+            margin: 2rem 0;
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
         }
-        
-        section:hover {
-            transform: translateY(-5px);
-        }
-        
         h2 {
             color: var(--color-secondary);
             margin-bottom: 1.5rem;
             text-align: center;
-            font-size: 2.2rem;
         }
-        
         h3 {
             color: var(--color-accent);
             margin: 1rem 0;
-            font-size: 1.4rem;
         }
-        
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
-        
         .feature {
             background: rgba(52, 73, 94, 0.5);
-            padding: 1.8rem;
-            border-radius: 15px;
+            padding: 1.5rem;
+            border-radius: 12px;
             border-left: 4px solid var(--color-secondary);
-            transition: all 0.3s ease;
         }
-        
-        .feature:hover {
-            background: rgba(52, 73, 94, 0.7);
-        }
-        
         .feature.critical {
             border-left-color: var(--color-accent);
         }
-        
-        .feature i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--color-secondary);
-        }
-        
-        .feature.critical i {
-            color: var(--color-accent);
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-        
-        .stat {
-            text-align: center;
-            padding: 1.5rem;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--color-secondary);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
         .cta {
             text-align: center;
             padding: 3rem 2rem;
         }
-        
         .btn {
             display: inline-block;
             background: var(--color-accent);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             margin: 0.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            transition: transform 0.2s;
         }
-        
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
         }
-        
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--color-secondary);
-            color: var(--color-secondary);
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(52, 152, 219, 0.1);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
-        }
-        
         footer {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem;
             margin-top: 3rem;
             opacity: 0.7;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links a {
-            color: var(--color-light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--color-secondary);
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                flex-direction: column;
-            }
-        }
-        
-        .counter {
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 1rem 0;
-            padding: 0.5rem;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
         }
     </style>
 </head>
@@ -252,114 +113,43 @@
         <section>
             <h2>The Mission</h2>
             <p>Enkelilink is a free, open-source, privacy-first resilient communication network. We are building a tool that allows smartphones to communicate directly during disasters, in conflict zones, and in remote areas <strong>without any cellular data or internet connection.</strong></p>
-            
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number" id="userCount">0</span>
-                    <span class="stat-label">Users Protected</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" id="nodeCount">0</span>
-                    <span class="stat-label">Active Nodes</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" id="countryCount">0</span>
-                    <span class="stat-label">Countries</span>
-                </div>
-            </div>
         </section>
 
         <section>
             <h2>How It Works</h2>
             <div class="features">
                 <div class="feature">
-                    <i class="fas fa-bluetooth"></i>
-                    <h3>Peer-to-Peer Mesh</h3>
+                    <h3>📱 Peer-to-Peer Mesh</h3>
                     <p>Phones connect directly using Bluetooth & Wi-Fi, creating a network that grows with every user.</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-solar-panel"></i>
-                    <h3>Hybrid Infrastructure</h3>
+                    <h3>🌐 Hybrid Infrastructure</h3>
                     <p>Mobile and solar-powered units act as super-nodes, extending the network's range and lifespan.</p>
                 </div>
                 <div class="feature critical">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h3>Emergency Features</h3>
+                    <h3>🚨 Emergency Features</h3>
                     <p>Priority messaging, resource mapping, and a secure system for emergency responders.</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-broadcast-tower"></i>
-                    <h3>Radio Integration</h3>
+                    <h3>📻 Radio Integration</h3>
                     <p>Broadcasts critical alerts via AM/FM, reaching everyone, even without a smartphone.</p>
                 </div>
             </div>
-        </section>
-
-        <section>
-            <h2>Technology Overview</h2>
-            <p>Enkelilink uses a combination of cutting-edge technologies to ensure reliable communication when it's needed most:</p>
-            <ul>
-                <li>Mesh networking protocols for device-to-device communication</li>
-                <li>Low-energy Bluetooth for extended battery life</li>
-                <li>End-to-end encryption for privacy and security</li>
-                <li>Adaptive routing algorithms for optimal path selection</li>
-                <li>Open-source hardware designs for community replication</li>
-            </ul>
         </section>
 
         <section class="cta">
             <h2>Join the Mission</h2>
             <p>This is a humanitarian project, not a commercial one. We need developers, designers, and advocates.</p>
             <p><strong>Current Status:</strong> Architectural design phase. Seeking core contributors.</p>
-            
-            <div class="counter">
-                <i class="fas fa-users"></i> <span id="visitorCount">0</span> people have joined this mission
-            </div>
-            
-            <a href="https://github.com/your-username/enkeli" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-            <a href="mailto:enkeli@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Us</a>
+            <br>
+            <a href="https://github.com/your-username/enkeli" class="btn">View on GitHub</a>
+            <a href="mailto:enkeli@gmail.com" class="btn">Contact Us</a>
         </section>
 
         <footer>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Documentation</a>
-                <a href="#">Contribute</a>
-                <a href="#">FAQ</a>
-            </div>
             <p>Made with ♥ for a more connected and resilient world.</p>
             <p>Enkelilink © 2024 - The Vigilant Network Project</p>
         </footer>
     </div>
-
-    <script>
-        // Animated counters
-        function animateCounter(elementId, target, duration) {
-            let element = document.getElementById(elementId);
-            let start = 0;
-            let increment = target / (duration / 16);
-            let current = start;
-            
-            let timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    clearInterval(timer);
-                    current = target;
-                }
-                element.textContent = Math.round(current).toLocaleString();
-            }, 16);
-        }
-        
-        // Initialize counters after page loads
-        window.addEventListener('load', () => {
-            animateCounter('userCount', 1250, 2000);
-            animateCounter('nodeCount', 86, 1500);
-            animateCounter('countryCount', 17, 1000);
-            
-            // Set a random visitor count between 50 and 150
-            const visitorCount = Math.floor(Math.random() * 100) + 50;
-            animateCounter('visitorCount', visitorCount, 1800);
-        });
-    </script>
 </body>
-                                                                              </html>
+</html>

@@ -42,25 +42,15 @@
             position: relative;
         }
         
-        .logo-svg {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 1.5rem;
-            display: block;
-            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+        .logo {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: float 6s ease-in-out infinite;
         }
         
-        .logo-wing {
-            fill: none;
-            stroke: #3498db;
-            stroke-width: 2;
-            stroke-linecap: round;
-        }
-        
-        .logo-node {
-            fill: #e74c3c;
-            stroke: #2c3e50;
-            stroke-width: 2;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
         h1 {
@@ -239,11 +229,6 @@
             .stats {
                 flex-direction: column;
             }
-            
-            .logo-svg {
-                width: 120px;
-                height: 120px;
-            }
         }
         
         .counter {
@@ -254,45 +239,12 @@
             background: rgba(0, 0, 0, 0.2);
             border-radius: 8px;
         }
-        
-        /* Animation for the logo */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        .logo-svg {
-            animation: pulse 6s ease-in-out infinite;
-        }
-        
-        .logo-wing {
-            animation: fadeIn 2s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <!-- Signal Wings Logo -->
-            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Left Wing (as signal arcs) -->
-                <path class="logo-wing" d="M30,50 C15,35 15,15 30,20" />
-                <path class="logo-wing" d="M30,50 C20,40 20,25 30,30" />
-                <path class="logo-wing" d="M30,50 C25,45 25,35 30,40" />
-                <!-- Right Wing (as signal arcs) -->
-                <path class="logo-wing" d="M70,50 C85,35 85,15 70,20" />
-                <path class="logo-wing" d="M70,50 C80,40 80,25 70,30" />
-                <path class="logo-wing" d="M70,50 C75,45 75,35 70,40" />
-                <!-- Central Circle (the "heart" of the network) -->
-                <circle class="logo-node" cx="50" cy="50" r="8" />
-            </svg>
-            
+            <div class="logo">👼</div>
             <h1>Enkelilink</h1>
             <p class="tagline">Guardian Angel Network for Crisis Communication</p>
         </header>
@@ -410,4 +362,4 @@
         });
     </script>
 </body>
-                        </html>
+                                                                              </html>
